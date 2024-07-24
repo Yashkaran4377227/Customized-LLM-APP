@@ -1,42 +1,90 @@
-# Customized-LLM-APP
+# 🕵️‍♂️ CyberSage: AI-Powered Threat Intelligence Advisor
 
-Building a Retrieval-Augmented Generation (RAG) bot can significantly enhance the capabilities of a language model by incorporating external knowledge to generate more accurate and contextually relevant responses. This guide will walk you through creating a simple RAG bot using Gradio and the Hugging Face APIs.
+## 📚 Powered by Expert Knowledge
+CyberSage draws its wisdom from "Cyber Threat Intelligence" by Ali Dehghantanha, Mauro Conti, and Tooska Dargahi.
 
-But how does RAG enhance LLM’s performance?
+---
 
-RAG improves the performance of language models by augmenting them with external documents. This method retrieves relevant documents based on the user query and combines them with the original prompt before passing them to the language model for response generation. This approach ensures that the language model can access up-to-date and domain-specific information without the need for extensive retraining.
+## 🔍 What is CyberSage?
 
+CyberSage is your AI companion in the realm of cybersecurity threat intelligence. Harnessing the power of advanced language models and a user-friendly Gradio interface, it offers insights on:
 
+- 🦠 Latest cyber threats
+- 🛡️ Emerging vulnerabilities
+- 🔧 Effective mitigation strategies
 
-A common scenario of RAG helping LLM (Source)
+---
 
-The basic steps in RAG can be simplified as follows:
+## 🚀 Key Features
 
-Input: The question to which the LLM system responds is referred to as the input. If no RAG is used, the LLM is directly used to respond to the question.
+- **AI Brain**: Utilizes Zephyr-7b-beta for intelligent threat analysis
+- **Dynamic Responses**: Adjustable parameters for customized outputs
+- **Sleek Interface**: Smooth chatting experience via Gradio
+- **Expert Knowledge Base**: Insights from leading cybersecurity experts
 
-Indexing: If RAG is used, then a series of related documents are indexed by chunking them first, generating embeddings of the chunks, and indexing them into a vector store. At inference, the query is also embedded in a similar way.
+---
 
+## 🛠️ Tech Stack
 
-Basic retrieval steps in RAG. (Source)
+- **LLM**: HuggingFaceH4/zephyr-7b-beta
+- **UI**: Gradio
+- **Backend**: Python
+- **Package Manager**: pip
 
-Retrieval: The relevant documents are obtained by comparing the query against the indexed vectors, also denoted as “Relevant Documents”.
+---
 
-Generation: The relevant documents are combined with the original prompt as additional context. The combined text and prompt are then passed to the model for response generation which is then prepared as the final output of the system to the user.
+## 🏁 Quick Start Guide
 
-In the example provided, using the model directly fails to respond to the question due to a lack of knowledge of current events. On the other hand, when using RAG, the system can pull the relevant information needed for the model to answer the question appropriately. (Source)
+1. **Clone CyberSage**
+   ```
+   git clone https://github.com/Yashkaran4377227/Customized-LLM-APP/.git
+   cd Customized-LLM-APP
+   ```
 
-Now Let’s Build a Chatbot using RAG:
+2. **Install Requirements**
+   ```
+   pip install -r requirements.txt
+   ```
 
-I have used Zephyr LLM model and all-MiniLM-L6-v2 sentence transformer model. This sentence-transformers model maps sentences & paragraphs to a 384 dimensional dense vector space and can be used for tasks like clustering or semantic search.
+3. **Launch CyberSage**
+   ```
+   python app.py
+   ```
 
-The all-* models were trained on all available training data (more than 1 billion training pairs) and are designed as general purpose models. The all-mpnet-base-v2 model provides the best quality, while all-MiniLM-L6-v2 is 5 times faster and still offers good quality. Toggle All models to see all evaluated original models.
+4. **Start Chatting**
+   Open your browser and navigate to the local URL displayed in your terminal
 
-We need the following ingredients:
+---
 
-1. A PDF as your knowledgebase
+## 🎛️ Customize Your Experience
 
-2. A requirements.txt file
+Tweak these parameters in the Gradio interface:
 
-3. An app.py file
+- **System Message**: Define CyberSage's role and personality
+- **Max New Tokens**: Control the length of responses (1-2048)
+- **Temperature**: Adjust the creativity level (0.1-4.0)
+- **Top-p**: Fine-tune response diversity (0.1-1.0)
 
-4. An account on Hugging Face (See this blog to learn about building a LLM chatbot in Hugging Face)
+---
+
+## 🚨 Important Note
+
+While CyberSage offers valuable insights, it's not a substitute for professional cybersecurity expertise. Always consult certified professionals for critical security decisions.
+
+---
+
+## 🤝 Join the CyberSage Community
+
+We welcome contributors! Here's how you can help:
+
+- 🐛 Spot a bug? Open an issue!
+- 💡 Have an idea? Share it!
+- 🔧 Want to improve the code? Submit a pull request!
+---
+
+## 📞 Get in Touch
+
+Have questions or suggestions? Reach out:
+- 📧 Email: ya4377227@alphacollege.me
+
+Stay one step ahead in the cyber world with CyberSage! 🔐🤖
