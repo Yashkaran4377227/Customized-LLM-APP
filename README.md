@@ -1,13 +1,13 @@
-# 🕵️‍♂️ CyberSage: AI-Powered Threat Intelligence Advisor
+# 🕵️‍♂️ CyberSage: AI-Powered Threat Intelligence Advisor with RAG
 
-## 📚 Powered by Expert Knowledge
-CyberSage draws its wisdom from "Cyber Threat Intelligence" by Ali Dehghantanha, Mauro Conti, and Tooska Dargahi.
+## 📚 Powered by Expert Knowledge and RAG Technology
+CyberSage is an advanced implementation of a Retrieval-Augmented Generation (RAG) bot, drawing its wisdom from "Cyber Threat Intelligence" by Ali Dehghantanha, Mauro Conti, and Tooska Dargahi. This project builds upon the Customized-LLM-APP framework, enhancing it for cybersecurity applications.
 
 ---
 
 ## 🔍 What is CyberSage?
 
-CyberSage is your AI companion in the realm of cybersecurity threat intelligence. Harnessing the power of advanced language models and a user-friendly Gradio interface, it offers insights on:
+CyberSage is your AI companion in the realm of cybersecurity threat intelligence. It harnesses the power of RAG to provide more accurate and contextually relevant responses. By incorporating external knowledge, CyberSage offers insights on:
 
 - 🦠 Latest cyber threats
 - 🛡️ Emerging vulnerabilities
@@ -17,16 +17,17 @@ CyberSage is your AI companion in the realm of cybersecurity threat intelligence
 
 ## 🚀 Key Features
 
-- **AI Brain**: Utilizes Zephyr-7b-beta for intelligent threat analysis
+- **RAG-Enhanced AI Brain**: Utilizes Zephyr-7b-beta with RAG for intelligent threat analysis
 - **Dynamic Responses**: Adjustable parameters for customized outputs
 - **Sleek Interface**: Smooth chatting experience via Gradio
-- **Expert Knowledge Base**: Insights from leading cybersecurity experts
+- **Expert Knowledge Base**: Insights from leading cybersecurity experts, indexed and retrieved using RAG
 
 ---
 
 ## 🛠️ Tech Stack
 
 - **LLM**: HuggingFaceH4/zephyr-7b-beta
+- **Embedding Model**: all-MiniLM-L6-v2 sentence transformer
 - **UI**: Gradio
 - **Backend**: Python
 - **Package Manager**: pip
@@ -64,6 +65,18 @@ Tweak these parameters in the Gradio interface:
 - **Max New Tokens**: Control the length of responses (1-2048)
 - **Temperature**: Adjust the creativity level (0.1-4.0)
 - **Top-p**: Fine-tune response diversity (0.1-1.0)
+
+---
+
+## 🧠 How RAG Enhances CyberSage
+
+CyberSage uses RAG to improve its performance by:
+
+1. **Indexing**: The cybersecurity knowledge base is indexed into a vector store.
+2. **Retrieval**: When a query is received, relevant documents are retrieved from the index.
+3. **Generation**: The retrieved information is combined with the original prompt for more informed responses.
+
+This approach allows CyberSage to access up-to-date and domain-specific cybersecurity information without extensive retraining.
 
 ---
 
