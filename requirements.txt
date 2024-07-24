@@ -1,6 +1,12 @@
+
 gradio
 huggingface_hub
 PyMuPDF
 sentence-transformers
-numpy
 faiss-cpu
+numpy
+pydantic
+hf-transfer
+protobuf
+click
+
